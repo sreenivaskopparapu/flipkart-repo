@@ -63,9 +63,3 @@ jobs:
       - name: Push Docker Image
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/app:latest
-
-      # Just to demonstrate which profile was selected
-      - name: Show Selected Spring Profile
-        run: |
-          echo "Selected environment: ${{ inputs.environment }}"
-          echo "Spring profile: ${{ vars.SPRING_PROFILES_ACTIVE }}"
